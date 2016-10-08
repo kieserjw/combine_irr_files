@@ -31,11 +31,7 @@ def parse_file(file):
             plot = m.group(1)
             subplot = m.group(2)
             position = m.group(3)
-            
-            '''m = re.compile('^([A-Z])atMeristem', re.IGNORECASE).match(position)
-            if m is not None:
-                position = m.group(1)
-            '''
+
             if position == 'atMeristem':
                 position = 'M'
             elif position == 'UatMeristem':
@@ -64,9 +60,11 @@ def main(argv):
         names_only = False
     
     # Set the path
-    path = "./spring-data/"
+    
+    data_set = "data"
     levels = "*/*.IRR"
-    path = path + levels
+    
+    path = os.path.join(data_set, levels)
 
     output = "out.csv"
     output_full = "out_full.csv"
