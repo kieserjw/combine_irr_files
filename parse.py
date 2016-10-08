@@ -64,7 +64,7 @@ def main(argv):
         names_only = False
     
     # Set the path
-    path = "./data/"
+    path = "./spring-data/"
     levels = "*/*.IRR"
     path = path + levels
 
